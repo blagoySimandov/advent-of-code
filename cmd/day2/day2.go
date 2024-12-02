@@ -44,7 +44,7 @@ func isReportSafe(arr []int) bool {
 		var cstate Monotonicity
 		n := current - next
 		if n < 0 {
-			cstate = Deacreasing
+			cstate = Decreasing
 		} else {
 			cstate = Increasing
 		}
@@ -65,9 +65,9 @@ func isReportSafe(arr []int) bool {
 }
 
 const (
-	Increasing  Monotonicity = "increasing"
-	Deacreasing Monotonicity = "deacreasing"
-	UNKNOWN     Monotonicity = ""
+	Increasing Monotonicity = "increasing"
+	Decreasing Monotonicity = "decreasing"
+	UNKNOWN    Monotonicity = ""
 )
 
 type Monotonicity string

@@ -71,7 +71,3 @@ const (
 )
 
 type Monotonicity string
-
-type FiniteStateMachine struct {
-	Monotonicity Monotonicity
-}

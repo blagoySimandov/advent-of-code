@@ -10,7 +10,7 @@ func StringSliceToInt(arr []string) ([]int, error) {
 	for _, v := range arr {
 		i, err := strconv.Atoi(v)
 		if err != nil {
-			return intArray, fmt.Errorf("ebalo si e maikata: %w", err)
+			return intArray, fmt.Errorf("err %w", err)
 		}
 		intArray = append(intArray, i)
 	}

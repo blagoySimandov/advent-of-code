@@ -15,7 +15,7 @@ func main() {
 		innerArray := strings.Split(l, " ")
 		intArr, err := inpututil.StringSliceToInt(innerArray)
 		if err != nil {
-			log.Fatal("ebalo si e maikata naistina")
+			log.Fatal("whoopsie")
 		}
 		inputMatrix = append(inputMatrix, intArr)
 	}

@@ -81,7 +81,12 @@ func isReportSafeWithDamp(arr []int) bool {
 		if current == next {
 			arrWithoutNext := deleteElement(arr, i+1)
 			arrWithoutCurrent := deleteElement(arr, i)
-			if isReportSafe(arrWithoutCurrent) || isReportSafe(arrWithoutNext) {
+			prevBool := false
+			if i != 0 {
+				arrWithoutPrev := deleteElement(arr, i-1)
+				prevBool = isReportSafe(arrWithoutPrev)
+			}
+			if isReportSafe(arrWithoutCurrent) || isReportSafe(arrWithoutNext) || prevBool {
 				return true
 			}
 			return false
@@ -100,7 +105,12 @@ func isReportSafeWithDamp(arr []int) bool {
 		if state != cstate {
 			arrWithoutNext := deleteElement(arr, i+1)
 			arrWithoutCurrent := deleteElement(arr, i)
-			if isReportSafe(arrWithoutCurrent) || isReportSafe(arrWithoutNext) {
+			prevBool := false
+			if i != 0 {
+				arrWithoutPrev := deleteElement(arr, i-1)
+				prevBool = isReportSafe(arrWithoutPrev)
+			}
+			if isReportSafe(arrWithoutCurrent) || isReportSafe(arrWithoutNext) || prevBool {
 				return true
 			}
 			return false
@@ -109,7 +119,12 @@ func isReportSafeWithDamp(arr []int) bool {
 		if absN < 1 || absN > 3 {
 			arrWithoutNext := deleteElement(arr, i+1)
 			arrWithoutCurrent := deleteElement(arr, i)
-			if isReportSafe(arrWithoutCurrent) || isReportSafe(arrWithoutNext) {
+			prevBool := false
+			if i != 0 {
+				arrWithoutPrev := deleteElement(arr, i-1)
+				prevBool = isReportSafe(arrWithoutPrev)
+			}
+			if isReportSafe(arrWithoutCurrent) || isReportSafe(arrWithoutNext) || prevBool {
 				return true
 			}
 			return false
